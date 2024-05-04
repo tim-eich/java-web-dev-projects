@@ -11,19 +11,19 @@ public class Restaurant {
 
         Menu fullMenu = new Menu(newMenu);
 
-        fullMenu.addToFullMenu(frenchFries);
-        fullMenu.addToFullMenu(plainPizza);
-        fullMenu.addToFullMenu(cheeseSteak);
-        fullMenu.addToFullMenu(chocoCake);
-
-//        System.out.println(frenchFries);
-//        System.out.println(plainPizza);
-//        System.out.println(cheeseSteak);
-//        System.out.println(chocoCake);
+        fullMenu.addToMenu(frenchFries);
+        fullMenu.addToMenu(plainPizza);
+        fullMenu.addToMenu(cheeseSteak);
+        fullMenu.addToMenu(chocoCake);
 
         fullMenu.printFullMenu();
+
         // System.out.println(fullMenu);
 
+        // fullMenu.removeFromMenu(cheeseSteak);
 
+        // fullMenu.printFullMenu();
+
+        fullMenu.printSingleItem(plainPizza);
     }
 }

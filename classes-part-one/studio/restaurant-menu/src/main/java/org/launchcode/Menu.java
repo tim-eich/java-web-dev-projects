@@ -13,9 +13,13 @@ public class Menu {
         menuCreatedOn = currentDate;
     }
 
-    public void addToFullMenu(MenuItem item) {
+    public void addToMenu(MenuItem item) {
         fullMenu.add(item);
         lastUpdated = currentDate;
+    }
+
+    public void removeFromMenu(MenuItem item) {
+        fullMenu.remove(item);
     }
 
     public ArrayList<MenuItem> getFullMenu() {
@@ -48,6 +52,10 @@ public class Menu {
             System.out.print("\n");
         }
         System.out.println("This menu was last updated on " + this.getLastMenuUpdate());
+    }
+
+    public void printSingleItem(MenuItem item) {
+        System.out.println(item);
     }
 
     @Override

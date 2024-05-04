@@ -28,7 +28,7 @@ public class MenuItem {
     }
 
     public String getItemDescription() {
-        return itemDescription;
+        return this.itemDescription;
     }
 
     public String getItemCategory() {
