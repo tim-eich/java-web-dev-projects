@@ -21,6 +21,13 @@ public class BalancedBrackets {
      */
     public static boolean hasBalancedBrackets(String str) {
         int brackets = 0;
+        if (str == null) {
+            throw new IllegalArgumentException("Provided argument is null");
+        } else if (str.trim().isEmpty()) {
+            throw new IllegalArgumentException("Provided argument contains no characters");
+        } else if (!str.contains("[") || !str.contains("]")) {
+            throw new IllegalArgumentException("Provided argument contains no brackets");
+        }
         for (char ch : str.toCharArray()) {
             if (ch == '[') {
                 brackets++;
