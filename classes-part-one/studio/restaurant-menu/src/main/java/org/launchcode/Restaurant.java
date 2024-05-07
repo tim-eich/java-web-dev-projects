@@ -27,3 +27,5 @@ public class Restaurant {
         fullMenu.printSingleItem(plainPizza);
     }
 }
+
+// All tests from "Implementation" passing. Bonus mission incomplete.
