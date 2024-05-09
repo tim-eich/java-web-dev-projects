@@ -2,22 +2,34 @@ package org.launchcode;
 import java.util.Scanner;
 
 public abstract class Questions {
-    private String question;
+    private final String question;
     private boolean isCorrect;
-    private int pointValue;
+    private final int pointValue;
+
+    Scanner input = new Scanner(System.in);
+
+    public Questions(String question, int pointValue) {
+        this.question = question;
+        this.pointValue = pointValue;
+    }
 
     public void displayQuestion() {
         System.out.println(question);
     }
 
-    public void displayAnswers(String answer) {
-        System.out.println(answer);
+    abstract void displayAnswer();
+    abstract void getCandidateAnswer();
+    abstract void validateAnswer();
+
+    public int getPointValue() {
+        return pointValue;
     }
 
-    public String getCandidateAnswers() {
-        Scanner input = new Scanner(System.in);
-        System.out.println("Please select an answer, or answers, from the options provided.");
+    public boolean isCorrect() {
+        return isCorrect;
+    }
 
-        return input.nextLine();
+    public void markCorrect(boolean correct) {
+        isCorrect = correct;
     }
 }
