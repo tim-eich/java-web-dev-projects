@@ -25,7 +25,7 @@ public class TrueFalse extends Questions {
 
     @Override
     public void validateAnswer() {
-        gradeQuestion(Objects.equals(candidateAnswer.toLowerCase(), correctAnswer));
+        gradeQuestion(candidateAnswer.toLowerCase().equals(correctAnswer));
         if (this.isCorrect()) {
             System.out.println("You answered correctly!");
         } else {
