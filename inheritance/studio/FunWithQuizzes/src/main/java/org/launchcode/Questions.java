@@ -5,6 +5,7 @@ public abstract class Questions {
     private final String question;
     private boolean isCorrect;
     private final int pointValue;
+    private int pointsEarned;
 
     Scanner input = new Scanner(System.in);
 
@@ -29,7 +30,7 @@ public abstract class Questions {
         return isCorrect;
     }
 
-    public void markCorrect(boolean correct) {
+    public void gradeQuestion(boolean correct) {
         isCorrect = correct;
     }
 }
