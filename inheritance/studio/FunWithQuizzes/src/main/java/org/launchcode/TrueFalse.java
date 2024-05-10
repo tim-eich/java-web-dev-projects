@@ -18,7 +18,7 @@ public class TrueFalse extends Questions {
 
     @Override
     public void getCandidateAnswer() {
-        System.out.println("Please respond T for true, or F for false");
+        System.out.println("Please respond True or False.");
         candidateAnswer = input.nextLine();
         validateAnswer();
     }
@@ -27,9 +27,9 @@ public class TrueFalse extends Questions {
     public void validateAnswer() {
         gradeQuestion(candidateAnswer.toLowerCase().equals(correctAnswer));
         if (this.isCorrect()) {
-            System.out.println("You answered correctly!");
+            System.out.println("You answered correctly!\n");
         } else {
-            System.out.println("Sorry, the answer you chose is incorrect.");
+            System.out.println("Sorry, the answer you chose is incorrect.\n");
         }
     }
 

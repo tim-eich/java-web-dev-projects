@@ -1,9 +1,22 @@
 package org.launchcode;
 
 public class CheckBox extends Questions{
+    public CheckBox(String question, int pointValue) {
+        super(question, pointValue);
+    }
+
     @Override
     public void displayAnswer() {
-        super.displayAnswer();
+    }
+
+    @Override
+    void getCandidateAnswer() {
+
+    }
+
+    @Override
+    void validateAnswer() {
+
     }
 
     @Override

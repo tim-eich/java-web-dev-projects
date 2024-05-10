@@ -37,9 +37,9 @@ public class MultipleChoice extends Questions{
     public void validateAnswer() {
         gradeQuestion(candidateAnswer == correctAnswer);
         if (this.isCorrect()) {
-            System.out.println("You answered correctly!");
+            System.out.println("You answered correctly!\n");
         } else {
-            System.out.println("Sorry, the answer you chose is incorrect.");
+            System.out.println("Sorry, the answer you chose is incorrect.\n");
         }
     }
 }
