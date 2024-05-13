@@ -10,8 +10,7 @@ public class CheckBox extends Questions{
     }
 
     @Override
-    void getCandidateAnswer() {
-
+    void getCandidateAnswer()ç
     }
 
     @Override
