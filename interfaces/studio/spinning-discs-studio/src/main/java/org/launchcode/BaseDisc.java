@@ -2,25 +2,18 @@ package org.launchcode;
 
 public abstract class BaseDisc implements OpticalDisc{
 
-    private final int readSpeed;
-    private final int writeSpeed;
-    private final int minDiscSpeed;
-    private final int maxDiscSpeed;
     private final double totalCapacity;
     private double usedCapacity = 0;
     private String discName;
     private final String discType;
 
-    public BaseDisc(String discType, double capacity, int readSpeed, int writeSpeed, int minDiscSpeed, int maxDiscSpeed, double totalCapacity, String discName) {
+    public BaseDisc(String discType, int minDiscSpeed, int maxDiscSpeed, double totalCapacity, String discName) {
         this.discType = discType;
         this.totalCapacity = totalCapacity;
-        this.readSpeed = readSpeed;
-        this.writeSpeed = writeSpeed;
-        this.minDiscSpeed = minDiscSpeed;
-        this.maxDiscSpeed = maxDiscSpeed;
         this.discName = discName;
     }
 
+    @Override
     public void writeData(double data) {
         if (data > this.getAvailableSpace()) {
             System.out.println("There is not enough space on this disc!");
@@ -30,28 +23,17 @@ public abstract class BaseDisc implements OpticalDisc{
         }
     }
 
+    @Override
+    public void readData() {
+        System.out.println("There is " + this.getUsedCapacity() + "MB stored in the disc.");
+    }
+
     public void setUsedCapacity(double data) {
         this.usedCapacity += data;
     }
 
     public void setDiscName(String discName) {
         this.discName = discName;
-    }
-
-    public int getReadSpeed() {
-        return readSpeed;
-    }
-
-    public int getWriteSpeed() {
-        return writeSpeed;
-    }
-
-    public int getMinDiscSpeed() {
-        return minDiscSpeed;
-    }
-
-    public int getMaxDiscSpeed() {
-        return maxDiscSpeed;
     }
 
     public String getDiscName() {
